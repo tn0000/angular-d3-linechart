@@ -1,0 +1,10 @@
+<div>
+  <label>Battery: </label>
+  <select (change)="filterBatteries($event.target.value)">
+    <option *ngFor="let number of nums" value={{number}}>
+      {{number}}
+    </option>
+  </select>
+</div>
+
+<app-bar-chart *ngIf="selectedData.length>0" [data]="selectedData"></app-bar-chart>
